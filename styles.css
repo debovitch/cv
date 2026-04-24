@@ -1,0 +1,305 @@
+:root {
+  --page-width: 210mm;
+  --page-height: 297mm;
+  --ink: #1e1e1f;
+  --muted: #767676;
+  --side-bg: #eeeeee;
+  --accent: #ff100d;
+}
+
+@font-face {
+  font-family: "Open Sans CV";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans CV";
+  font-style: normal;
+  font-weight: 800;
+  src: url("assets/OpenSans-Bold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #d9d9d9;
+  color: var(--ink);
+  font-family: "Open Sans CV", Arial, Helvetica, sans-serif;
+  line-height: 1.28;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.page {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  margin: 18px auto;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 16%);
+}
+
+.red-block {
+  position: absolute;
+  top: 6.2mm;
+  left: 31.3mm;
+  width: 16mm;
+  height: 26.5mm;
+  background: var(--accent);
+}
+
+.sidebar {
+  position: absolute;
+  top: 45mm;
+  left: 6.2mm;
+  width: 54.2mm;
+  height: 233.8mm;
+  padding: 29.9mm 5.1mm 0;
+  background: var(--side-bg);
+}
+
+.portrait {
+  position: absolute;
+  top: -3.6mm;
+  left: 50%;
+  width: 26.5mm;
+  height: 26.5mm;
+  object-fit: cover;
+  border: 0.3mm solid #ffffff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.intro {
+  position: absolute;
+  top: 8.2mm;
+  left: 55.8mm;
+  width: 132mm;
+}
+
+.intro h1 {
+  margin: 0 0 4.2mm;
+  color: #55565a;
+  font-size: 3.05mm;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.intro p {
+  margin: 0;
+  color: #707070;
+  font-size: 3.25mm;
+  line-height: 1.34;
+  white-space: nowrap;
+}
+
+.content {
+  position: absolute;
+  top: 45.85mm;
+  left: 58.8mm;
+  width: 130mm;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 13.8mm 1fr;
+  column-gap: 1.95mm;
+}
+
+.section-marker {
+  margin-top: -2mm;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12mm;
+  font-weight: 800;
+  line-height: 0.86;
+}
+
+.section-spacer {
+  width: 13.8mm;
+}
+
+.section h2,
+.side-section h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 3.75mm;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section h2::after,
+.side-section h2::after {
+  display: block;
+  width: 10.7mm;
+  height: 0.25mm;
+  margin-top: 3.6mm;
+  background: var(--ink);
+  content: "";
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 20.8mm 1fr;
+  column-gap: 2.95mm;
+  margin-top: 4.8mm;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 3.9mm;
+}
+
+.date {
+  margin: 0;
+  color: #4d5054;
+  font-size: 3.3mm;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 3.75mm;
+  font-weight: 800;
+  line-height: 1.14;
+}
+
+.timeline-item p,
+.education-item p {
+  margin: 0;
+}
+
+.timeline-item .company {
+  margin-top: 0.9mm;
+  color: var(--muted);
+  font-size: 3.75mm;
+  line-height: 1.05;
+}
+
+.timeline-item div > p:not(.company) {
+  margin-top: 2.15mm;
+  color: var(--muted);
+  font-size: 3.25mm;
+  line-height: 1.42;
+  white-space: nowrap;
+}
+
+.education {
+  margin-top: 10.8mm;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 20.8mm 1fr;
+  column-gap: 2.95mm;
+  margin-top: 7.4mm;
+}
+
+.education-item + .education-item {
+  margin-top: 4.1mm;
+}
+
+.education-item p:not(.date) {
+  color: var(--ink);
+  font-size: 3.75mm;
+  font-weight: 800;
+  line-height: 1.14;
+  white-space: nowrap;
+}
+
+.education-item strong {
+  display: block;
+  font-weight: 800;
+}
+
+.side-section {
+  margin-top: 0;
+}
+
+.side-section + .side-section {
+  margin-top: 8.8mm;
+}
+
+.side-section h2 {
+  font-size: 3.75mm;
+}
+
+.side-section h2::after {
+  width: 10.7mm;
+  margin-top: 3.7mm;
+}
+
+.side-section dl,
+.side-section p {
+  margin: 5mm 0 0;
+}
+
+.side-section dt {
+  margin-top: 5.15mm;
+  color: var(--ink);
+  font-size: 2.55mm;
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.side-section dt:first-child {
+  margin-top: 0;
+}
+
+.side-section dd,
+.side-section p {
+  margin-left: 0;
+  color: var(--muted);
+  font-size: 3.55mm;
+  line-height: 1.32;
+}
+
+.languages p {
+  display: flex;
+  gap: 1.7mm;
+  align-items: baseline;
+}
+
+.languages strong {
+  color: var(--ink);
+  font-size: 3.55mm;
+  font-weight: 800;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: var(--page-width);
+    height: var(--page-height);
+    background: #ffffff;
+  }
+
+  .page {
+    width: var(--page-width);
+    height: var(--page-height);
+    margin: 0;
+    box-shadow: none;
+  }
+}
