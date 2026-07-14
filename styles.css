@@ -6,7 +6,7 @@
   --paper: #ffffff;
   --panel: #f1f1f1;
   --ink: #242424;
-  --muted: #8a8a8a;
+  --muted: #858585;
   --accent: #e2676e;
 }
 
@@ -16,17 +16,17 @@
 
 html,
 body {
-  margin: 0;
   min-height: 100%;
+  margin: 0;
 }
 
 body {
   background: #d8d8d8;
   color: var(--ink);
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 8pt;
+  font-size: 8.6pt;
   font-weight: 400;
-  line-height: 1.26;
+  line-height: 1.28;
   -webkit-font-smoothing: antialiased;
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
@@ -53,7 +53,7 @@ a {
 
 .identity {
   grid-area: identity;
-  padding: 4.1mm 6.5mm;
+  padding: 4mm 6.5mm;
   background: var(--accent);
   color: #ffffff;
 }
@@ -64,54 +64,52 @@ a {
 }
 
 .identity h1 {
-  font-size: 29pt;
+  font-size: 27pt;
   font-weight: 300;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
 .identity .name {
   margin-top: 4.2mm;
-  font-size: 14.5pt;
+  font-size: 14pt;
   font-weight: 300;
   line-height: 1;
 }
 
-.identity a {
-  display: inline-block;
+.identity .role {
   margin-top: 1.1mm;
-  font-size: 10pt;
+  font-size: 9.5pt;
   font-weight: 300;
   line-height: 1;
 }
 
 .sidebar {
-  position: relative;
   grid-area: sidebar;
   background: var(--paper);
 }
 
 .portrait {
   display: block;
-  width: 22mm;
-  height: 27.9mm;
+  width: 24mm;
+  height: 28.5mm;
   margin: 4.6mm auto 0;
   object-fit: cover;
 }
 
 .sidebar-content {
-  margin: 23.7mm 7.2mm 0 6.2mm;
+  margin: 18mm 7.2mm 0 6.2mm;
 }
 
 .side-section + .side-section {
-  margin-top: 6.2mm;
+  margin-top: 7.2mm;
 }
 
 .side-section h2,
 .section > h2 {
   margin: 0;
   border-bottom: 0.3mm solid #353535;
-  font-size: 15.5pt;
+  font-size: 15pt;
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.18;
@@ -126,45 +124,16 @@ a {
 }
 
 .side-section p {
-  margin: 4.3mm 0 0;
-  text-align: justify;
+  margin: 4mm 0 0;
+  text-align: left;
 }
 
 .side-section p + p {
-  margin-top: 2.6mm;
+  margin-top: 2.8mm;
 }
 
 .side-section strong {
   font-weight: 700;
-}
-
-.triangle-list {
-  margin: 3.8mm 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.triangle-list li {
-  position: relative;
-  margin-top: 1.8mm;
-  padding-left: 4.7mm;
-}
-
-.triangle-list li::before,
-.detail-list > li::before {
-  position: absolute;
-  top: 0.37em;
-  left: 0.6mm;
-  width: 0;
-  height: 0;
-  border-top: 0.85mm solid transparent;
-  border-bottom: 0.85mm solid transparent;
-  border-left: 1.1mm solid #111111;
-  content: "";
-}
-
-.contact {
-  margin-top: 7.2mm !important;
 }
 
 .contact address {
@@ -174,10 +143,9 @@ a {
 
 .contact address > * {
   display: grid;
-  grid-template-columns: 4.7mm 1fr;
-  gap: 0;
+  grid-template-columns: 4.7mm minmax(0, 1fr);
   align-items: start;
-  margin: 0 0 2.2mm;
+  margin: 0 0 2.6mm;
 }
 
 .contact address img {
@@ -185,6 +153,36 @@ a {
   width: 3.5mm;
   height: 3.5mm;
   object-fit: contain;
+}
+
+.contact .web-icon {
+  position: relative;
+  display: block;
+  width: 3.5mm;
+  height: 3.5mm;
+  border: 0.35mm solid currentColor;
+  border-radius: 50%;
+}
+
+.contact .web-icon::before,
+.contact .web-icon::after {
+  position: absolute;
+  content: "";
+}
+
+.contact .web-icon::before {
+  inset: -0.35mm 0.8mm;
+  border-right: 0.25mm solid currentColor;
+  border-left: 0.25mm solid currentColor;
+  border-radius: 50%;
+}
+
+.contact .web-icon::after {
+  top: 50%;
+  right: 0;
+  left: 0;
+  border-top: 0.25mm solid currentColor;
+  transform: translateY(-50%);
 }
 
 .contact address p img {
@@ -196,30 +194,77 @@ a {
   text-align: left;
 }
 
+.details dl {
+  margin: 4mm 0 0;
+}
+
+.details dt {
+  margin-top: 3mm;
+  font-size: 7.5pt;
+  font-weight: 700;
+}
+
+.details dt:first-child {
+  margin-top: 0;
+}
+
+.details dd {
+  margin: 0.5mm 0 0;
+  color: #555555;
+}
+
+.approach .triangle-list {
+  margin-top: 3.4mm;
+}
+
+.approach .triangle-list li {
+  margin-top: 1.4mm;
+}
+
 .main-content {
   grid-area: content;
   min-width: 0;
-  padding: 5mm 6.8mm 0 6.5mm;
+  padding: 4.7mm 6.6mm 4mm 6.5mm;
   background: var(--panel);
 }
 
 .section > h2 {
-  padding-bottom: 1.3mm;
+  padding-bottom: 1.2mm;
 }
 
 .job {
-  margin-top: 2.7mm;
+  margin-top: 3mm;
+}
+
+.job + .job {
+  margin-top: 3.8mm;
+}
+
+.job-heading {
+  display: flex;
+  gap: 4mm;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .job h3,
 .skills h3,
-.bottom-grid h3 {
+.education h3 {
   margin: 0;
   color: var(--accent);
-  font-size: 13.5pt;
+  font-size: 13.1pt;
   font-weight: 300;
   letter-spacing: -0.018em;
   line-height: 1.12;
+}
+
+.period {
+  flex: none;
+  margin: 0;
+  color: #555555;
+  font-size: 7.4pt;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .meta {
@@ -227,124 +272,112 @@ a {
 }
 
 .job .meta {
-  margin: 0.5mm 0 0;
+  margin: 0.55mm 0 0;
 }
 
-.detail-list {
-  margin: 1.4mm 0 0;
+.job .description {
+  margin: 1.1mm 0 0;
+}
+
+.project-list {
+  margin: 1.2mm 0 0;
   padding: 0;
   list-style: none;
 }
 
-.detail-list > li {
+.project-list li {
   position: relative;
-  margin-top: 1.6mm;
-  padding-left: 2.7mm;
+  margin-top: 1.1mm;
+  padding-left: 2.8mm;
 }
 
-.detail-list > li::before {
-  top: 0.38em;
+.project-list li::before {
+  position: absolute;
+  top: 0.42em;
   left: 0;
-  border-top-width: 0.7mm;
-  border-bottom-width: 0.7mm;
-  border-left-width: 0.9mm;
+  width: 0;
+  height: 0;
+  border-top: 0.7mm solid transparent;
+  border-bottom: 0.7mm solid transparent;
+  border-left: 0.9mm solid var(--accent);
+  content: "";
 }
 
-.detail-list strong,
-.detail-list span {
-  display: block;
-}
-
-.detail-list strong {
-  font-size: 8.6pt;
+.project-list strong {
   font-weight: 700;
-  line-height: 1.15;
-}
-
-.detail-list span {
-  margin-top: 0.35mm;
-}
-
-.compact-job {
-  margin-top: 3mm;
-}
-
-.compact-job .detail-list > li {
-  margin-top: 1.5mm;
-}
-
-.last-job {
-  margin-top: 2.9mm;
 }
 
 .skills {
-  margin-top: 4mm;
+  margin-top: 6.5mm;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 0.9fr 1fr;
-  column-gap: 7.3mm;
-  row-gap: 5.1mm;
-  margin-top: 2.3mm;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5.4mm 6.2mm;
+  margin-top: 3.1mm;
 }
 
 .skills h3 {
-  font-size: 13.2pt;
+  font-size: 11.8pt;
 }
 
-.skills .triangle-list {
-  margin-top: 2.4mm;
+.triangle-list {
+  margin: 2.1mm 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.skills .triangle-list li {
-  margin-top: 1.45mm;
+.triangle-list li {
+  position: relative;
+  margin-top: 1.25mm;
   padding-left: 3.2mm;
-  white-space: nowrap;
 }
 
-.skills .triangle-list li::before {
+.triangle-list li::before {
+  position: absolute;
+  top: 0.38em;
   left: 0;
-  border-top-width: 0.7mm;
-  border-bottom-width: 0.7mm;
-  border-left-width: 0.9mm;
+  width: 0;
+  height: 0;
+  border-top: 0.7mm solid transparent;
+  border-bottom: 0.7mm solid transparent;
+  border-left: 0.9mm solid #111111;
+  content: "";
 }
 
-.bottom-grid {
+.education {
+  margin-top: 5.5mm;
+}
+
+.education-grid {
   display: grid;
-  grid-template-columns: 1.18fr 1fr;
-  gap: 11mm;
-  margin-top: 6.2mm;
+  grid-template-columns: 1fr;
+  gap: 3.2mm;
+  margin-top: 3.2mm;
 }
 
-.bottom-grid .section > h2 {
-  font-size: 15pt;
+.education article {
+  display: grid;
+  grid-template-columns: 11mm minmax(0, 1fr);
+  gap: 2.2mm;
 }
 
-.bottom-grid article {
-  margin-top: 2.5mm;
+.education .year {
+  margin: 0.5mm 0 0;
+  color: #555555;
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-align: right;
 }
 
-.bottom-grid article + article {
-  margin-top: 6mm;
+.education h3 {
+  font-size: 11.2pt;
 }
 
-.bottom-grid h3 {
-  font-size: 13pt;
-}
-
-.bottom-grid article p {
-  margin: 1.4mm 0 0;
-  font-size: 8.2pt;
-}
-
-.bottom-grid article .meta {
-  margin-top: 1.5mm;
-  font-size: 7.7pt;
-}
-
-.hobbies article + article {
-  margin-top: 8.7mm;
+.education .meta {
+  margin: 1mm 0 0;
+  font-size: 7.5pt;
 }
 
 @page {
@@ -389,7 +422,7 @@ a {
   }
 
   .identity h1 {
-    font-size: clamp(30px, 9vw, 46px);
+    font-size: clamp(30px, 8vw, 46px);
   }
 
   .identity .name {
@@ -399,48 +432,59 @@ a {
   .sidebar {
     order: 2;
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 26px;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 28px;
     padding: 30px clamp(24px, 7vw, 56px);
   }
 
   .portrait {
     width: 120px;
-    height: auto;
+    height: 142px;
     margin: 0;
   }
 
   .sidebar-content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px 34px;
+    gap: 28px 34px;
     margin: 0;
   }
 
-  .side-section + .side-section,
-  .contact {
-    margin-top: 0 !important;
-  }
-
-  .side-section:first-child {
+  .profile {
     grid-column: 1 / -1;
   }
 
-  .side-section p {
-    margin-top: 16px;
+  .side-section + .side-section {
+    margin-top: 0;
   }
 
   .main-content {
     order: 3;
-    padding: 32px clamp(24px, 7vw, 56px) 48px;
+    padding: 34px clamp(24px, 7vw, 56px) 50px;
+  }
+
+  .job,
+  .job + .job {
+    margin-top: 22px;
+  }
+
+  .skills,
+  .education {
+    margin-top: 38px;
   }
 
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
   }
 
-  .skills .triangle-list li {
-    white-space: normal;
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .education article:first-child {
+    grid-row: auto;
   }
 }
 
@@ -454,40 +498,24 @@ a {
   }
 
   .sidebar-content,
-  .skills-grid,
-  .bottom-grid {
+  .skills-grid {
     display: block;
   }
 
   .side-section + .side-section,
-  .contact {
-    margin-top: 30px !important;
+  .skills-grid section + section {
+    margin-top: 30px;
   }
 
-  .job,
-  .compact-job,
-  .last-job {
-    margin-top: 24px;
+  .job-heading {
+    display: block;
   }
 
-  .detail-list > li {
-    margin-top: 14px;
-    padding-left: 15px;
+  .period {
+    margin-top: 6px;
   }
 
-  .skills,
-  .bottom-grid {
-    margin-top: 36px;
-  }
-
-  .skills-grid section,
-  .bottom-grid .section + .section {
-    margin-top: 26px;
-  }
-
-  .bottom-grid article,
-  .bottom-grid article + article,
-  .hobbies article + article {
-    margin-top: 22px;
+  .education article {
+    grid-template-columns: 46px minmax(0, 1fr);
   }
 }

@@ -3,40 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CV de Thierry Duchassin, développeur mobile">
-    <title>Thierry Duchassin — Développeur mobile</title>
+    <meta
+      name="description"
+      content="CV de Thierry Duchassin, développeur full-stack mobile freelance spécialisé Flutter, Swift et backend"
+    >
+    <title>Thierry Duchassin — Développeur mobile sénior</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="cv" aria-label="Curriculum vitæ de Thierry Duchassin">
       <header class="identity">
-        <h1>Développeur mobile</h1>
+        <h1>Développeur mobile sénior</h1>
         <p class="name">Thierry Duchassin</p>
-        <a href="http://thierry.duchassin.fr">http://thierry.duchassin.fr</a>
+        <p class="role">Flutter, Swift, SwiftUI</p>
       </header>
 
       <aside class="sidebar" aria-label="Présentation et coordonnées">
         <img class="portrait" src="assets/profile.png" alt="Portrait de Thierry Duchassin">
 
         <div class="sidebar-content">
-          <section class="side-section">
-            <h2>Présentation</h2>
+          <section class="side-section profile">
+            <h2>Profil</h2>
             <p>
-              <strong>Développeur mobile</strong> depuis trois ans, mon expertise s’est tournée vers le
-              développement mobile <strong>multiplateforme avec Cordova et AngularJS.</strong>
+              Développeur mobile depuis une quinzaine d'années, je crée des applications iOS et
+              Android de la conception initiale jusqu'à la publication sur les stores.
             </p>
             <p>
-              En plus d’une solide connaissance des langages <strong>natifs</strong>, le champ de mes compétences
-              s’est ainsi fortement élargi aux technologies du <strong>web.</strong>
+              Je porte une attention particulière à l’architecture, la qualité du code, les tests et
+              l’expérience utilisateur.
             </p>
-          </section>
-
-          <section class="side-section infos">
-            <h2>Infos</h2>
-            <ul class="triangle-list">
-              <li>36 ans</li>
-              <li>Permis B</li>
-            </ul>
           </section>
 
           <section class="side-section contact">
@@ -46,15 +41,42 @@
                 <img src="assets/icon-mail.png" alt="">
                 <span>thierry.duchassin@gmail.com</span>
               </a>
+              <a href="https://dodecamoon.com" target="_blank" rel="noopener noreferrer">
+                <span class="web-icon" aria-hidden="true"></span>
+                <span>https://dodecamoon.com</span>
+              </a>
               <a href="tel:+33620172210">
                 <img src="assets/icon-phone.png" alt="">
-                <span>06 20 17 22 10</span>
+                <span>+33 6 20 17 22 10</span>
               </a>
               <p>
                 <img src="assets/icon-location.png" alt="">
-                <span>42 rue Belle Dumont,<br>01750 St-Laurent-sur-Saône<br>France</span>
+                <span>42 rue Belle Dumont<br>01750 Saint-Laurent-sur-Saône<br>France</span>
               </p>
             </address>
+          </section>
+
+          <section class="side-section details">
+            <h2>Informations</h2>
+            <dl>
+              <dt>Âge</dt>
+              <dd>48 ans</dd>
+              <dt>Permis</dt>
+              <dd>B — Véhicule léger</dd>
+              <dt>Langue</dt>
+              <dd>Anglais courant</dd>
+            </dl>
+          </section>
+
+          <section class="side-section approach">
+            <h2>Approche</h2>
+            <ul class="triangle-list">
+              <li>Architecture maintenable</li>
+              <li>Performance et simplicité</li>
+              <li>Qualité et sécurité</li>
+              <li>Expérience utilisateur</li>
+              <li>Autonomie intégrale</li>
+            </ul>
           </section>
         </div>
       </aside>
@@ -64,52 +86,76 @@
           <h2>Expériences</h2>
 
           <article class="job">
-            <h3>Développeur mobile</h3>
-            <p class="meta">Mayflower • Lyon • CDI • Depuis Septembre 2012</p>
-            <ul class="detail-list">
+            <div class="job-heading">
+              <h3>Développeur mobile freelance</h3>
+              <p class="period">Depuis 03/2025</p>
+            </div>
+            <p class="meta">Dodecamoon</p>
+            <ul class="project-list">
               <li>
-                <strong>Développement d’applications mobiles multiplateformes avec Cordova et AngularJS</strong>
-                <span>Delta Security Solutions, application disponible sur iOS, Android, Windows Phone et BlackBerry.</span>
-                <span>Développement de plugins Cordova, structuration MVC du code html et js.</span>
-                <span>Intégration de nombreux plugins javascript tels que iScroll, mobiscroll, datatables.</span>
+                <strong>TetraC</strong> — jeu iPhone/iPad en SwiftUI avec architecture en couches et
+                MVVM, IA, défis, MultipeerConnectivity avec synchronisation/reconnexion et tests unitaires/UI.
               </li>
               <li>
-                <strong>Développement d’applications mobiles natives iOS et Android</strong>
-                <span>SosNight, application iPad avec géolocalisation, webservices.</span>
-                <span>BNL, application tablette Android de présentation de produits.</span>
-              </li>
-              <li><strong>Publications sur Apple Store, Google Play, Windows Store et BlackBerry Store</strong></li>
-              <li>
-                <strong>Développement d’un plugin Photoshop en AS3</strong>
-                <span>Le plugin détecte les couleurs les plus fréquentes d’un dessin, communique par webservice à un serveur, enregistre le dessin au format tiff sur le réseau, lance la gravure d’un CD.</span>
+                <strong>Cut it!</strong> — application Flutter pilotant en Bluetooth une découpeuse
+                Silhouette, backend TypeScript/Node.js et Supabase/PostgreSQL, déploiement Docker.
               </li>
             </ul>
           </article>
 
-          <article class="job compact-job">
-            <h3>Développeur mobile en alternance</h3>
-            <p class="meta">EP Factory • Lyon • Contrat de professionnalisation • 2011 - 2012</p>
-            <ul class="detail-list">
-              <li>
-                <strong>Artilinki, application mobile réalisée avec Titanium</strong>
-                <span>Ce projet m’a permis d’acquérir durant la maîtrise du langage Javascript, de l’environnement OS X, de Git, des webservices et du REST.</span>
-              </li>
-              <li>
-                <strong>Moteur générique d’applications mobiles type présentation</strong>
-                <span>Ce projet a consolidé mes connaissances en développements natifs Android et iOS.</span>
-              </li>
-            </ul>
+          <article class="job">
+            <div class="job-heading">
+              <h3>Lead développeur mobile</h3>
+              <p class="period">01/2020 — 11/2024</p>
+            </div>
+            <p class="meta">LifeStoneLink</p>
+            <p class="description">
+              Développement de l’application Gabby en Flutter pour iOS et Android, de la conception
+              jusqu’à la publication sur les stores.
+            </p>
           </article>
 
-          <article class="job compact-job last-job">
-            <h3>Professeur de mathématiques</h3>
-            <p class="meta">Éducation Nationale • Bourg-en-Bresse • CDI • 2002 - 2011</p>
-            <ul class="detail-list">
-              <li>
-                <strong>Professeur des lycées et collèges durant neuf ans</strong>
-                <span>J’ai donné des cours dans tous les niveaux du secondaire, de la sixième à la terminale S.</span>
-              </li>
-            </ul>
+          <article class="job">
+            <div class="job-heading">
+              <h3>Développeur iOS natif</h3>
+              <p class="period">01/2016 — 01/2020</p>
+            </div>
+            <p class="meta">Itelios</p>
+            <p class="description">
+              Développement natif iOS en Swift d’applications e-commerce utilisant Salesforce pour
+              de grandes entreprises telles que CDiscount, Pimkie, Orchestra, Casino…
+            </p>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Développeur Android natif</h3>
+              <p class="period">09/2015 — 01/2016</p>
+            </div>
+            <p class="meta">Itron</p>
+            <p class="description">
+              Développement Android natif en Java, avec un gros accent sur les tests unitaires
+              et les tests d’intégration.
+            </p>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Développeur mobile</h3>
+              <p class="period">09/2011 — 09/2015</p>
+            </div>
+            <p class="meta">Mayflower</p>
+            <p class="description">
+              Applications natives iOS et Android, solutions multiplateformes Titanium en JavaScript.
+            </p>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Professeur de mathématiques des lycées et collèges</h3>
+              <p class="period">09/2002 — 09/2011</p>
+            </div>
+            <p class="meta">Éducation Nationale</p>
           </article>
         </section>
 
@@ -117,91 +163,82 @@
           <h2>Compétences</h2>
           <div class="skills-grid">
             <section>
-              <h3>iOS natif</h3>
+              <h3>Swift &amp; iOS natif</h3>
               <ul class="triangle-list">
-                <li>Objective-C, CoreData</li>
-                <li>Swift (en apprentissage)</li>
-                <li>OpenGL sur iOS</li>
+                <li>Swift, SwiftUI, UIKit</li>
+                <li>Objective-C, Core Data</li>
+                <li>Applications iPhone &amp; iPad</li>
               </ul>
             </section>
             <section>
-              <h3>Android natif</h3>
+              <h3>Architecture</h3>
               <ul class="triangle-list">
-                <li>Android, Java</li>
-                <li>GreenDAO</li>
-                <li>OpenGL sur Android</li>
+                <li>MVVM, architecture en couches</li>
+                <li>Injection de dépendances</li>
+                <li>Protocoles &amp; responsabilités</li>
               </ul>
             </section>
             <section>
-              <h3>Multiplateforme</h3>
+              <h3>Concurrence</h3>
               <ul class="triangle-list">
-                <li>Cordova / PhoneGap</li>
-                <li>Titanium</li>
-                <li>Angular, Ionic, Yeoman, Grunt</li>
+                <li>Swift Concurrency</li>
+                <li>Task, actors, async/await</li>
+                <li>@MainActor, Observation, Combine</li>
               </ul>
             </section>
             <section>
-              <h3>Web spécifique</h3>
+              <h3>Frameworks Apple</h3>
               <ul class="triangle-list">
-                <li>HTML5, JS, CSS3, jQuery</li>
-                <li>PHP, Laravel 4, Symfony 2</li>
-                <li>NodeJS, WebGL, BabylonJS</li>
+                <li>MultipeerConnectivity</li>
+                <li>AVFoundation, iCloud KVS</li>
+                <li>LiquidGlass</li>
               </ul>
             </section>
             <section>
-              <h3>IDE</h3>
+              <h3>Qualité &amp; UX</h3>
               <ul class="triangle-list">
-                <li>Xcode</li>
-                <li>Eclipse</li>
-                <li>PhpStorm</li>
+                <li>Swift Testing, XCTest UI</li>
+                <li>Localisation, accessibilité</li>
+                <li>UI adaptative, animations</li>
               </ul>
             </section>
             <section>
-              <h3>Divers</h3>
+              <h3>Outils</h3>
               <ul class="triangle-list">
-                <li>Mac OS, Linux, Windows</li>
-                <li>Photoshop, InDesign</li>
-                <li>Git</li>
+                <li>Bitrise, fastlane</li>
+                <li>Firebase, Crashlytics</li>
+                <li>VSCode, Codex, Git</li>
               </ul>
             </section>
           </div>
         </section>
 
-        <div class="bottom-grid">
-          <section class="section education">
-            <h2>Formations</h2>
+        <section class="section education">
+          <h2>Formations</h2>
+          <div class="education-grid">
             <article>
-              <h3>Licence d’Informatique Mobile</h3>
-              <p>En alternance chez EP Factory à Lyon</p>
-              <p class="meta">IUT Lyon 1 de Bourg-en-Bresse • 2011 - 2012</p>
+              <p class="year">2012</p>
+              <div>
+                <h3>Licence professionnelle d’Informatique Mobile et Embarquée</h3>
+                <p class="meta">IUT Lyon 1, Bourg-en-Bresse — alternance chez EP Factory</p>
+              </div>
             </article>
             <article>
-              <h3>Préparation au CAPES</h3>
-              <p>Admission à la suite de la préparation</p>
-              <p class="meta">IUFM - Lyon • 2001-2002</p>
+              <p class="year">2002</p>
+              <div>
+                <h3>CAPES de mathématiques</h3>
+                <p class="meta">IUFM de Lyon</p>
+              </div>
             </article>
             <article>
-              <h3>Licence de Mathématiques</h3>
-              <p class="meta">Université Claude Bernard - Lyon 1 • 1999-2000</p>
+              <p class="year">2000</p>
+              <div>
+                <h3>Licence de Mathématiques</h3>
+                <p class="meta">Université Claude Bernard Lyon 1</p>
+              </div>
             </article>
-          </section>
-
-          <section class="section hobbies">
-            <h2>Loisirs</h2>
-            <article>
-              <h3>Sorties</h3>
-              <p>Sorties entre amis, concerts, cinéma</p>
-            </article>
-            <article>
-              <h3>Sports</h3>
-              <p>Course à pied, natation, squash</p>
-            </article>
-            <article>
-              <h3>Divers</h3>
-              <p>3D, énigmes, casse-têtes, polytopes réguliers</p>
-            </article>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </main>
   </body>
